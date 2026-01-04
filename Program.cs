@@ -36,8 +36,8 @@ namespace Hotel_Room_Booking_System
                     Bill.Bills();
                     break;
             }
-            Console.WriteLine("********** Please select Rooms ***********");
-
+            //Console.WriteLine("\n");
+            Console.WriteLine("********** Please select Rooms ***********\n");
             Console.WriteLine(" 1.StandardRoom \n 2.DelaxRoom \n 3.SuperDelax");
             int meanu = Convert.ToInt32(Console.ReadLine());
             Booking booking = new Booking();
@@ -61,7 +61,7 @@ namespace Hotel_Room_Booking_System
 
             }
 
-            Console.WriteLine("******* Plz select Optons *******");
+            Console.WriteLine("******* Plz select Optons *******\n");
             Console.WriteLine("1.AddCustomer \n 2.DeleteCust \n 3.DisplayAllCustomer");
             int Cust = Convert.ToInt32(Console.ReadLine());
             Customer customer = new Customer();
