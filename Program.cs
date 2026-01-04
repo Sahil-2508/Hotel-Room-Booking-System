@@ -8,8 +8,9 @@ namespace Hotel_Room_Booking_System
         static void Main(string[] args)
         {
             Console.WriteLine("------Welcome To Hotel Mangement System------");
-            Console.WriteLine("plz select Options");
-            Console.WriteLine(" 1.Booking \n 2.Customer \n 3.Payment \n 4.Bill");
+            Console.WriteLine("****------plz select Options---------****");
+            Console.WriteLine(" 1.Booking \n 2.DisplayAllBooking \n 3.Customer \n 4.Payment \n 5.Bill");
+            
             int choice1 = Convert.ToInt32(Console.ReadLine());
 
             switch (choice1)
@@ -18,22 +19,25 @@ namespace Hotel_Room_Booking_System
                     Console.WriteLine("Booking selected ");
                     Booking.BookingCust();
                     break;
-                case 2:
+                    case 2:
+                    Booking.DisplayAllBooking();
+                    break;
+                case 3:
                     Console.WriteLine("Customer selected");
                     Customer.AddCustomer();
                     break;
-                //case 3:
-                //   Console.WriteLine("Payment selected");
-                //   Payment.CashPayment();
-                //    break;
-
                 case 4:
+                    Console.WriteLine("Payment selected");
+                    Payment.DisplayPayment();
+                    break;
+
+                case 5:
                     Console.WriteLine("Bill is Selected");
                     Bill.Bills();
                     break;
             }
+            Console.WriteLine("********** Please select Rooms ***********");
 
-            Console.WriteLine("Plz select Rooms");
             Console.WriteLine(" 1.StandardRoom \n 2.DelaxRoom \n 3.SuperDelax");
             int meanu = Convert.ToInt32(Console.ReadLine());
             Booking booking = new Booking();
@@ -57,7 +61,7 @@ namespace Hotel_Room_Booking_System
 
             }
 
-            Console.WriteLine("Plz select Optons");
+            Console.WriteLine("******* Plz select Optons *******");
             Console.WriteLine("1.AddCustomer \n 2.DeleteCust \n 3.DisplayAllCustomer");
             int Cust = Convert.ToInt32(Console.ReadLine());
             Customer customer = new Customer();
@@ -70,7 +74,7 @@ namespace Hotel_Room_Booking_System
                     Customer.DeleteCust(Cust);
                     break;
             }
-            Console.WriteLine("Plz Select Options");
+            Console.WriteLine("******** Plz Select Options *********");
             Console.WriteLine("1.CashPayment \n 2.OnlinePaymnent \n 3.MobileBanking");
             Payment payment = new Payment();
             int Paymentchoice = Convert.ToInt32(Console.ReadLine());
@@ -80,6 +84,9 @@ namespace Hotel_Room_Booking_System
                     Payment.CashPayment();
                     break;
                 case 2:
+                    Payment.OnlinePayment();
+                    break;
+                case 3:
                     Payment.DisplayPayment();
                     break;
             }
@@ -107,7 +114,7 @@ namespace Hotel_Room_Booking_System
                         Bill.Bills();
                    break;
                         case 6:
-                        Bill.DisplayBill();
+                        Bill.DisplayAllBills();
                         break;
 
 

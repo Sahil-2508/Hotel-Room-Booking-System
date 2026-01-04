@@ -39,13 +39,20 @@ namespace Hotel_Room_Booking_System
             bill.FinalAmount = Convert.ToDecimal(Console.ReadLine());
 
             Service.bills1.Add(bill);
-            DisplayBill();
+            DisplayAllBills();
 
         }
         public static void DisplayBill()
         {
             Bill bill = new Bill();
             Console.WriteLine($"BillId:{bill.BillId},BookingId:{bill.BookingId},TotalNights:{bill.TotalNights},RoomCharges:{bill.RoomCharges},Discount:{bill.Discount},FinalAmount:{bill.FinalAmount}");
+        }
+        public static void DisplayAllBills()
+        {
+            foreach(Bill bill in Service.bills1)
+            {
+                Console.WriteLine($"BillId:{bill.BillId},BookingId:{bill.BookingId},TotalNights:{bill.TotalNights},RoomCharges:{bill.RoomCharges},Discount:{bill.Discount},FinalAmount:{bill.FinalAmount}");
+            }
         }
 
     }
