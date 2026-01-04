@@ -38,17 +38,11 @@ namespace Hotel_Room_Booking_System
         public static void DeleteCust(int CustId)
         {
             Customer customer = new Customer();
-            
+
             Console.WriteLine("Enter CustId");
-            customer.CustId =Convert.ToInt32(Console.ReadLine());
-
-            //int removed = customer.CustId(c => c.CustId == custId);
-
-            //if (removed > 0)
-            //    Console.WriteLine("Customer deleted successfully.");
-            //else
-            //    Console.WriteLine("Customer not found.");
+            customer.CustId = Convert.ToInt32(Console.ReadLine());
         }
+
         public static void DisplayCustomer(Customer customer)
         {
             Console.WriteLine($"CustId:{customer.CustId},CustomerName:{customer.CustomerName},EmailAddress:{customer.EmailAddress},PhoneNumber:{customer.PhoneNumber}");  

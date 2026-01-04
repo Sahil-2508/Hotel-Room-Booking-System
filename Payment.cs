@@ -37,6 +37,46 @@ namespace Hotel_Room_Booking_System
             DisplayPayment();
 
         }
+        public static void OnlinePayment()
+        {
+            Payment payment= new Payment();
+
+            Console.WriteLine("Enter Payment Id");
+            payment.PaymentId= Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter Booking Id");
+            payment.BookingId = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter Amount");
+            payment.Amount = Convert.ToDecimal(Console.ReadLine());
+
+            payment.IsPaymentSuccessful = true;
+
+            Service.payments1.Add(payment);
+            DisplayPayment();
+
+
+        }
+        public static void MobileBanking()
+        {
+            Payment payment = new Payment();
+
+            Console.WriteLine("Enter Payment Id");
+            payment.PaymentId = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter Booking Id");
+            payment.BookingId = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter Amount");
+            payment.Amount = Convert.ToDecimal(Console.ReadLine());
+
+            payment.IsPaymentSuccessful = true;
+
+            Service.payments1.Add(payment);
+            DisplayPayment();
+
+
+        }
 
         public static void DisplayPayment()
         {

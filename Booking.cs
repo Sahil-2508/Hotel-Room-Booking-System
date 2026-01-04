@@ -35,11 +35,21 @@ namespace Hotel_Room_Booking_System
             booking1.BookingStatus = Console.ReadLine();
 
             Service.bookings.Add(booking1);
-           
+            DisplayAllBooking();
+
+
         }
         public static void DisplayBookingCust(Booking booking1)
         {
             Console.WriteLine($"BookingId:{booking1.BookingId},Customer:{booking1.Customer},CheckInDate:{booking1.CheckInDate},CheckOutDate:{booking1.CheckOutDate},BookingStatus:{booking1.BookingStatus}");
+        }
+        public static void DisplayAllBooking()
+        {
+            foreach (Booking booking in Service.bookings)
+            {
+                Console.WriteLine($"BookingId:{booking.BookingId},Customer:{booking.Customer},CheckInDate:{booking.CheckInDate},CheckOutDate:{booking.CheckOutDate},BookingStatus:{booking.BookingStatus}");
+
+            }
         }
 
 
